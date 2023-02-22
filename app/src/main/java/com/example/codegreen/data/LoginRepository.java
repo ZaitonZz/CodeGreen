@@ -1,6 +1,6 @@
 package com.example.codegreen.data;
 
-import com.example.codegreen.data.model.LoggedInUser;
+import com.example.codegreen.data.Model.LoggedInUser;
 
 /**
  * Class that requests authentication and user information from the remote data source and

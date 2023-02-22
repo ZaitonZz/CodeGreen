@@ -1,4 +1,4 @@
-package com.example.codegreen.data.model;
+package com.example.codegreen.data.Model;
 
 /**
  * Data class that captures user information for logged in users retrieved from LoginRepository

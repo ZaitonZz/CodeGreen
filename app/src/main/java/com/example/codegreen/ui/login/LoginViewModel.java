@@ -1,15 +1,15 @@
 package com.example.codegreen.ui.login;
 
+import android.util.Patterns;
+
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import android.util.Patterns;
-
-import com.example.codegreen.data.LoginRepository;
-import com.example.codegreen.data.Result;
-import com.example.codegreen.data.model.LoggedInUser;
 import com.example.codegreen.R;
+import com.example.codegreen.data.LoginRepository;
+import com.example.codegreen.data.Model.LoggedInUser;
+import com.example.codegreen.data.Result;
 
 public class LoginViewModel extends ViewModel {
 

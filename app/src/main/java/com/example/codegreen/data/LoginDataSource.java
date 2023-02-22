@@ -1,6 +1,6 @@
 package com.example.codegreen.data;
 
-import com.example.codegreen.data.model.LoggedInUser;
+import com.example.codegreen.data.Model.LoggedInUser;
 
 import java.io.IOException;
 
