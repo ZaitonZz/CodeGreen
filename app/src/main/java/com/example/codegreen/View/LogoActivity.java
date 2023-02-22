@@ -11,7 +11,7 @@ import com.example.codegreen.Controller.getProgressBar;
 import com.example.codegreen.R;
 import com.example.codegreen.ui.login.LoginActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class LogoActivity extends AppCompatActivity {
 
     ProgressBar progressBar;
     TextView textView;
