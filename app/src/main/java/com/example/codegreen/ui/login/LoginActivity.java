@@ -1,9 +1,12 @@
 package com.example.codegreen.ui.login;
 
+import static android.content.ContentValues.TAG;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
@@ -20,6 +23,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.codegreen.R;
+import com.example.codegreen.View.MainScreenActivity;
 import com.example.codegreen.databinding.ActivityLoginBinding;
 
 public class LoginActivity extends AppCompatActivity {
@@ -122,6 +126,8 @@ public class LoginActivity extends AppCompatActivity {
     private void updateUiWithUser(LoggedInUserView model) {
         String welcome = getString(R.string.welcome) + model.getDisplayName();
         // TODO : initiate successful logged in experience
+        startActivity(new Intent(this, MainScreenActivity.class));
+        Log.d(TAG, "updateUiWithUser: working");
         Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
     }
 

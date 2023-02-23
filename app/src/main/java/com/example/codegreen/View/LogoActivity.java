@@ -2,6 +2,7 @@ package com.example.codegreen.View;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -15,14 +16,22 @@ public class LogoActivity extends AppCompatActivity {
 
     ProgressBar progressBar;
     TextView textView;
+    ImageView logo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_logo);
         progressBar = findViewById(R.id.pro);
         textView = findViewById(R.id.txt);
         enableFullscreen();
+        logo = findViewById(R.id.imageView);
+        logo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
         progressBar.setMax(100);
         progressBar.setScaleY(2f);
