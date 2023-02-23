@@ -7,6 +7,24 @@
     <string name="action_sign_in_short">Sign in</string>
     <string name="welcome">"Welcome !"</string>
     <string name="invalid_username">Not a valid username</string>
+    <string name="areasHint">Areas</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string-array name="Areas">
+        <item>Maa</item>
+        <item>Buhangin</item>
+        <item>Indangan</item>
+        <item>Bangkerohan</item>
+        <item>Agdao</item>
+    </string-array>
+    <string-array name="Produce">
+        <item>Pork</item>
+        <item>Beef</item>
+        <item>Chicken</item>
+        <item>Goat</item>
+        <item>Fish</item>
+        <item>Clams</item>
+        <item>Squid</item>
+        <item>Shrimp</item>
+    </string-array>
 </resources>
