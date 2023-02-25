@@ -27,6 +27,12 @@
             android:value="AIzaSyD42wVHfoR40LihzT2KZ7xK6HoPafsT9s0" />
 
         <activity
+            android:name=".View.MapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".View.BirdsEyeActivity"
+            android:exported="false" />
+        <activity
             android:name=".View.SearchActivity"
             android:exported="false" />
         <activity

@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.codegreen.Controller.getProgressBar;
+import com.example.codegreen.Controller.GetProgressBar;
 import com.example.codegreen.R;
 import com.example.codegreen.ui.login.LoginActivity;
 
@@ -26,12 +26,6 @@ public class LogoActivity extends AppCompatActivity {
         textView = findViewById(R.id.txt);
         enableFullscreen();
         logo = findViewById(R.id.imageView);
-        logo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
 
         progressBar.setMax(100);
         progressBar.setScaleY(2f);
@@ -40,7 +34,7 @@ public class LogoActivity extends AppCompatActivity {
 
     private void progressAnimation() {
 
-        getProgressBar animation =  new getProgressBar(this,textView, progressBar,0f,100f, LoginActivity.class);
+        GetProgressBar animation =  new GetProgressBar(this,textView, progressBar,0f,100f, LoginActivity.class);
         animation.setDuration(8000);
         progressBar.setAnimation(animation);
 
@@ -55,5 +49,9 @@ public class LogoActivity extends AppCompatActivity {
                         View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY |
                         View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
         );
+    }
+    @Override
+    public void onBackPressed() {
+        finish();
     }
 }

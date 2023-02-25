@@ -24,12 +24,14 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.codegreen.R;
 import com.example.codegreen.View.MainScreenActivity;
+import com.example.codegreen.data.Model.CurrentUser;
 import com.example.codegreen.databinding.ActivityLoginBinding;
 
 public class LoginActivity extends AppCompatActivity {
 
     private LoginViewModel loginViewModel;
     private ActivityLoginBinding binding;
+    CurrentUser currentUser;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -73,7 +75,7 @@ public class LoginActivity extends AppCompatActivity {
                     showLoginFailed(loginResult.getError());
                 }
                 if (loginResult.getSuccess() != null) {
-                    updateUiWithUser(loginResult.getSuccess());
+                    updateUiWithUser(loginResult.getSuccess(), usernameEditText);
                 }
                 setResult(Activity.RESULT_OK);
 
@@ -123,10 +125,12 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-    private void updateUiWithUser(LoggedInUserView model) {
+    private void updateUiWithUser(LoggedInUserView model, EditText usernameEditText) {
         String welcome = getString(R.string.welcome) + model.getDisplayName();
         // TODO : initiate successful logged in experience
-        startActivity(new Intent(this, MainScreenActivity.class));
+        Intent passTo = new Intent(this, MainScreenActivity.class);
+        currentUser.setUsername(usernameEditText.getText().toString());
+        startActivity(passTo);
         Log.d(TAG, "updateUiWithUser: working");
         Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
     }
@@ -144,5 +148,11 @@ public class LoginActivity extends AppCompatActivity {
                         View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY |
                         View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
         );
+    }
+    @Override
+    public void onBackPressed() {
+        moveTaskToBack(true);
+        android.os.Process.killProcess(android.os.Process.myPid());
+        System.exit(0);
     }
 }
