@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 //TODO: find better design for loading screen
 
-public class getProgressBar extends Animation {
+public class GetProgressBar extends Animation {
     private Context context;
     private TextView textView;
     private android.widget.ProgressBar progressBar;
@@ -21,7 +21,7 @@ public class getProgressBar extends Animation {
     private Intent toG;
     private boolean called = false;
 
-    public getProgressBar(Context context, TextView textView, android.widget.ProgressBar progressBar, float from, float to, Class nextActivity) {
+    public GetProgressBar(Context context, TextView textView, android.widget.ProgressBar progressBar, float from, float to, Class nextActivity) {
         this.context = context;
         this.textView = textView;
         this.progressBar = progressBar;
