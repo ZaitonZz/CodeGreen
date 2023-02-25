@@ -22,7 +22,6 @@ public class MainScreenActivity extends AppCompatActivity {
 
 
     TextView welcomeMessage;
-    Button searchButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +35,7 @@ public class MainScreenActivity extends AppCompatActivity {
             }
         });
 
-        searchButton = (Button) findViewById(R.id.button);
+        searchButton = (Button) findViewById(R.id.buttonSearch);
         searchButton.setOnClickListener((new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,7 +46,7 @@ public class MainScreenActivity extends AppCompatActivity {
     }
 
     public void openMaps() {
-        Intent intent = new Intent(this, MapsActivity.class);
+        Intent intent = new Intent(this, MapActivity.class);
         startActivity(intent);
     }
 

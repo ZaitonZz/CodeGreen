@@ -29,9 +29,18 @@ public class SearchSettings {
 
     public static void setProduceID(String produceID) {
         switch (produceID){
-            case "POR", "BEE","CHI","GOA","FIS", "CLA","SQU","SHR"
-                    -> SearchSettings.produceID = produceID;
-            default -> {
+            case "POR":
+            case "BEE":
+            case "CHI":
+            case "GOA":
+            case "FIS":
+            case "CLA":
+            case "SQU":
+            case "SHR": {
+                SearchSettings.produceID = produceID;
+                break;
+            }
+            default: {
                 System.out.println("An Error has occurred");
                 android.os.Process.killProcess(android.os.Process.myPid());
                 System.exit(1);
