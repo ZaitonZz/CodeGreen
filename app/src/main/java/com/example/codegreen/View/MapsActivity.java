@@ -32,4 +32,10 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         googleMap.addMarker(new MarkerOptions().position(place).title("Marker in Davao"));
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(place));
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }

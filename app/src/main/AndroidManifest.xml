@@ -11,6 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CodeGreen"
         tools:targetApi="31">
+        <activity
+            android:name=".MotionLayOut"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
         <!--
                  TODO: Before you run your application, you need a Google Maps API key.
 
@@ -24,10 +30,10 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyD42wVHfoR40LihzT2KZ7xK6HoPafsT9s0" />
+            android:value="AIzaSyDnvLQjd0d_-23slOhN4kLPBSu1JLAOzhA" />
 
         <activity
-            android:name=".View.MapActivity"
+            android:name=".View.MapsActivity"
             android:exported="false" />
         <activity
             android:name=".View.BirdsEyeActivity"

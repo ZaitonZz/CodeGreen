@@ -27,26 +27,15 @@ public class MainScreenActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_screen);
         mapButton = (Button) findViewById(R.id.button2);
-        mapButton.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-            public void onClick(View view) {
-                openMaps();
-            }
-        });
+        mapButton.setOnClickListener(view -> openMaps());
 
         searchButton = (Button) findViewById(R.id.buttonSearch);
-        searchButton.setOnClickListener((new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openSearch();
-            }
-        }));
+        searchButton.setOnClickListener((view -> openSearch()));
 
     }
 
     public void openMaps() {
-        Intent intent = new Intent(this, MapActivity.class);
+        Intent intent = new Intent(this, MapsActivity.class);
         startActivity(intent);
     }
 
@@ -55,7 +44,6 @@ public class MainScreenActivity extends AppCompatActivity {
         startActivity(intent);
         searchButton = findViewById(R.id.buttonSearch);
         welcomeMessage = findViewById(R.id.welcomeText);
-        String s = "dsa";
         welcomeMessage.setText("Welcome "+CurrentUser.getUsername() +"!");
 
         searchButton.setOnTouchListener((view, motionEvent) -> {
@@ -65,8 +53,7 @@ public class MainScreenActivity extends AppCompatActivity {
     }
     @Override
     public void onBackPressed() {
-        moveTaskToBack(true);
-        android.os.Process.killProcess(android.os.Process.myPid());
-        System.exit(0);
+        super.onBackPressed();
+        finish();
     }
 }
