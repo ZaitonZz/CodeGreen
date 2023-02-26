@@ -42,7 +42,7 @@ public class SearchActivity extends AppCompatActivity {
                     temp2 = temp2 + spinnerProduce.getSelectedItem().toString().charAt(i);
                 }
                 SearchSettings parameters = new SearchSettings(true,temp2,temp1);
-                startActivity(new Intent(SearchActivity.this,MapActivity.class));
+                startActivity(new Intent(SearchActivity.this,MapsActivity.class));
                 return false;
             }
         });
@@ -50,8 +50,7 @@ public class SearchActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        moveTaskToBack(true);
-        android.os.Process.killProcess(android.os.Process.myPid());
-        System.exit(0);
+        super.onBackPressed();
+        finish();
     }
 }

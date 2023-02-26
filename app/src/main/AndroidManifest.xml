@@ -24,10 +24,10 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyD42wVHfoR40LihzT2KZ7xK6HoPafsT9s0" />
+            android:value="AIzaSyDnvLQjd0d_-23slOhN4kLPBSu1JLAOzhA" />
 
         <activity
-            android:name=".View.MapActivity"
+            android:name=".View.MapsActivity"
             android:exported="false" />
         <activity
             android:name=".View.BirdsEyeActivity"

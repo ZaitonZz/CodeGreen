@@ -54,4 +54,10 @@ public class LogoActivity extends AppCompatActivity {
     public void onBackPressed() {
         finish();
     }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        finish();
+    }
 }
