@@ -16,15 +16,43 @@
         <Constraint
             android:id="@+id/imageView"
             motion:layout_constraintEnd_toEndOf="parent"
-            android:layout_width="262dp"
-            android:layout_height="327dp"
+            android:layout_width="332dp"
+            android:layout_height="379dp"
             motion:layout_constraintBottom_toBottomOf="parent"
             android:visibility="invisible"
             motion:layout_constraintTop_toTopOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
-            motion:transitionEasing="standard" />
+            motion:transitionEasing="standard"
+            motion:layout_constraintVertical_bias="0.531"
+            motion:layout_constraintHorizontal_bias="0.493" />
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintHorizontal_bias="0.498"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/imageView"
+            android:id="@+id/pro" />
     </ConstraintSet>
 
     <ConstraintSet android:id="@+id/end">
+        <Constraint
+            motion:layout_constraintVertical_bias="0.348"
+            android:layout_height="379dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintHorizontal_bias="0.493"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="332dp"
+            android:id="@+id/imageView" />
+        <Constraint
+            android:layout_height="wrap_content"
+            motion:layout_constraintStart_toStartOf="@+id/pro"
+            android:layout_marginTop="52dp"
+            motion:layout_constraintEnd_toEndOf="@+id/pro"
+            android:layout_width="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@+id/pro"
+            android:id="@+id/txt" />
     </ConstraintSet>
 </MotionScene>

@@ -11,6 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CodeGreen"
         tools:targetApi="31">
+        <activity
+            android:name=".MotionLayOut"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
         <!--
                  TODO: Before you run your application, you need a Google Maps API key.
 
